@@ -1,38 +1,128 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+font-family: 'Poppins', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.sideBar{
+  top: 0;
+  left: 0;
+  width: 260px;
+background-color: #1b1b2a;}
+.logo img{
+  width: 240px;
+  margin: 10px;
+}
+.menu {
+ margin-top: 15px;
+ 
+}
+.menu a {
+display: block;
+text-decoration: none;
+ margin-top: 5px;
+ color:#b3b4bd;
+ font-size: 1rem;
+}
+ i{
+  display: inline;
+  color:#b3b4bd;
+  margin-left: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+h1{
+  font-size: 1rem;
+  margin: 10px 10px;
+  color: #29293c;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+.item *{
+display: inline;
+position: relative;
 }
 
-.App-link {
-  color: #61dafb;
+.item {
+height: 35px;
+padding-top: 5px;
+transition: all 0.4s ease ;
+cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.item:hover{
+  background-color: #29293c;
 }
+
+
+
+.items {
+height: 35px;
+padding-top: 5px;
+transition: all 0.4s ease ;
+cursor: pointer;
+}
+.items:hover{
+  background-color: #29293c;
+}
+.items *{
+display: inline;
+position: static;
+
+}
+.menuName {
+ color:#b3b4bd;
+ font-size: 1.2rem;
+ position: absolute;
+ left: 40px;
+ margin-top: -2px
+}
+.fa-chevron-down{
+  position: absolute;
+  left: 220px;
+  margin-top: 5px;
+  margin-right: 10px;
+}
+
+.subMenu {
+  padding: 10px 0;
+  background-color: #29293c;
+  display: none;
+  transition: 0.5s;
+}
+.subMenu a{
+  margin-left: 40px;
+  white-space: nowrap;
+  opacity: 0.6;
+  transition: all 0.3s ease;
+}
+.subMenu a:hover{
+  opacity: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
