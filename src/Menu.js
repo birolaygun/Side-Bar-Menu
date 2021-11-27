@@ -18,7 +18,7 @@ const Menu = (props) => {
                   <i className={item[0].icon}></i>
                 </div>
                 <div className="menuName ">
-                  {item[0].menu.toLowerCase().split(" ").join("_")}
+                  {item[0].menu}
                 </div>
               </div>
             </Link>
