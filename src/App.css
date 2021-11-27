@@ -7,6 +7,10 @@
   font-family: "Poppins", sans-serif;
 }
 
+*::selection {
+  background: transparent;
+} 
+
 .sideBar {
   top: 0;
   left: 0;
@@ -14,6 +18,8 @@
   overflow: hidden;
   background-color: #1b1b2a;
 }
+
+/* logo */
 
 .logo {
   position: fixed;
@@ -27,6 +33,9 @@
   width: 240px;
   margin: 10px;
 }
+
+/* menu */
+
 .menu {
   padding-top: 95px;
 }
@@ -42,17 +51,13 @@ i {
   color: #b3b4bd;
   margin-left: 10px;
 }
-
 h1 {
   font-size: 1rem;
   margin: 10px 10px;
   color: #29293c;
 }
 
-.item * {
-  display: inline;
-  position: relative;
-}
+/* Alt başlıksız Başlık */
 
 .item {
   height: 35px;
@@ -60,10 +65,15 @@ h1 {
   transition: all 0.4s ease;
   cursor: pointer;
 }
-
+.item * {
+  display: inline;
+  position: relative;
+}
 .item:hover {
   background-color: #29293c;
 }
+
+/* Alt başlıklı Başlık */
 
 .items {
   height: 35px;
@@ -71,12 +81,12 @@ h1 {
   transition: all 0.4s ease;
   cursor: pointer;
 }
-.items:hover {
-  background-color: #29293c;
-}
 .items * {
   display: inline;
   position: static;
+}
+.items:hover {
+  background-color: #29293c;
 }
 .menuName {
   color: #b3b4bd;
@@ -90,13 +100,11 @@ h1 {
   left: 220px;
   margin-top: 5px;
   margin-right: 10px;
+  transition: 0.2s;
 }
-
 .subMenu {
-  padding: 10px 0;
+  padding: 5px 0;
   background-color: #29293c;
-  display: none;
-  transition: 0.5s;
 }
 .subMenu a {
   margin-left: 40px;

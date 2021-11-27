@@ -17,16 +17,13 @@ const Menu = (props) => {
                 <div className="icon">
                   <i className={item[0].icon}></i>
                 </div>
-                <div className="menuName ">
-                  {item[0].menu}
-                </div>
+                <div className="menuName ">{item[0].menu}</div>
               </div>
             </Link>
           ) : (
-            <div key={Math.random()} className="menu-item">
+            <div key={Math.random()}>
               <div
                 onClick={() => {
-                  console.log("tıklandı");
                   if (
                     document.getElementById(
                       item[0].menu.toLowerCase().split(" ").join("_")
@@ -35,33 +32,36 @@ const Menu = (props) => {
                     document.getElementById(
                       item[0].menu.toLowerCase().split(" ").join("_")
                     ).style.display = "block";
-                    console.log("görünür oldu");
+
+                    document.getElementById(
+                      item[0].menu.toUpperCase().split(" ").join("_")
+                    ).style.transform = "rotate(-90deg)";
                   } else {
                     document.getElementById(
                       item[0].menu.toLowerCase().split(" ").join("_")
                     ).style.display = "none";
-                    console.log("silindi");
+
+                    document.getElementById(
+                      item[0].menu.toUpperCase().split(" ").join("_")
+                    ).style.transform = "rotate(0deg)";
                   }
                 }}
-                id={"a" + item[0].id}
-                className={"a" + item[0].id + " " + "items"}
+                className="items"
               >
-                <div className={" " + "icon"}>
+                <div className="icon">
                   <i className={item[0].icon}></i>
                 </div>
 
                 <div className={"menuName"}>{item[0].menu}</div>
 
-                <i className={"fas fa-chevron-down"}></i>
+                <i
+                  id={item[0].menu.toUpperCase().split(" ").join("_")}
+                  className={"fas fa-chevron-down"}
+                ></i>
               </div>
-
               <div
                 id={item[0].menu.toLowerCase().split(" ").join("_")}
-                className={
-                  `${item[0].menu.toLowerCase().split(" ").join("_")}` +
-                  " " +
-                  "subMenu"
-                }
+                className="subMenu"
                 style={{ display: "none" }}
               >
                 {item[1].map((sub) => (

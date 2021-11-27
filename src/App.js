@@ -9,7 +9,9 @@ function App() {
     <div className="App">
       <div className="sideBar">
         <div className="logo">
-          <img src={mercedes} alt="mercedes" />
+          <Link to="/">
+            <img src={mercedes} alt="mercedes" />
+          </Link>
         </div>
         <div className="menu">
 
