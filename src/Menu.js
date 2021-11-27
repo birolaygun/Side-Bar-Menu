@@ -8,8 +8,6 @@ const Menu = (props) => {
       {menu
         .filter((items) => items[0].class === props.clss)
         .map((item) => {
-
-
           return item.length === 1 ? (
             <Link
               to={`/${item[0].menu}`.toLowerCase().split(" ").join("_")}
@@ -19,26 +17,34 @@ const Menu = (props) => {
                 <div className="icon">
                   <i className={item[0].icon}></i>
                 </div>
-                <div className="menuName ">{item[0].menu}</div>
+                <div className="menuName ">
+                  {item[0].menu.toLowerCase().split(" ").join("_")}
+                </div>
               </div>
             </Link>
           ) : (
             <div key={Math.random()} className="menu-item">
               <div
                 onClick={() => {
+                  console.log("tıklandı");
                   if (
-                    document.getElementById(item[0].menu).style.display ===
-                    "none"
+                    document.getElementById(
+                      item[0].menu.toLowerCase().split(" ").join("_")
+                    ).style.display === "none"
                   ) {
-                    document.getElementById(item[0].menu).style.display =
-                      "block";
+                    document.getElementById(
+                      item[0].menu.toLowerCase().split(" ").join("_")
+                    ).style.display = "block";
+                    console.log("görünür oldu");
                   } else {
-                    document.getElementById(item[0].menu).style.display =
-                      "none";
+                    document.getElementById(
+                      item[0].menu.toLowerCase().split(" ").join("_")
+                    ).style.display = "none";
+                    console.log("silindi");
                   }
                 }}
-                id={item[0].id}
-                className={`${item[0].id}` + " " + "items"}
+                id={"a" + item[0].id}
+                className={"a" + item[0].id + " " + "items"}
               >
                 <div className={" " + "icon"}>
                   <i className={item[0].icon}></i>
@@ -50,8 +56,13 @@ const Menu = (props) => {
               </div>
 
               <div
-                id={item[0].menu}
-                className={`${item[0].menu}` + " " + "subMenu"}
+                id={item[0].menu.toLowerCase().split(" ").join("_")}
+                className={
+                  `${item[0].menu.toLowerCase().split(" ").join("_")}` +
+                  " " +
+                  "subMenu"
+                }
+                style={{ display: "none" }}
               >
                 {item[1].map((sub) => (
                   <Link

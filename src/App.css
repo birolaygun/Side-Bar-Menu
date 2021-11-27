@@ -12,12 +12,18 @@ font-family: 'Poppins', sans-serif;
   left: 0;
   width: 260px;
 background-color: #1b1b2a;}
+.logo{
+    position: fixed;
+    background-color: #1b1b2a;
+    box-shadow: 0 0 10px #b3b4bd;
+z-index: 2;
+}
 .logo img{
   width: 240px;
   margin: 10px;
 }
 .menu {
- margin-top: 15px;
+ padding-top: 95px;
  
 }
 .menu a {
