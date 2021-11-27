@@ -1,92 +1,91 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300&display=swap");
 
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
-.sideBar{
+.sideBar {
   top: 0;
   left: 0;
   width: 260px;
-background-color: #1b1b2a;}
-.logo{
-    position: fixed;
-    background-color: #1b1b2a;
-    box-shadow: 0 0 10px #b3b4bd;
-z-index: 2;
+  overflow: hidden;
+  background-color: #1b1b2a;
 }
-.logo img{
+
+.logo {
+  position: fixed;
+  background-color: #1b1b2a;
+  -moz-box-shadow: 0 5px 5px #b3b4bd;
+  -webkit-box-shadow: 0 5px 5px #b3b4bd;
+  box-shadow: 0 5px 5px #b3b4bd;
+  z-index: 2;
+}
+.logo img {
   width: 240px;
   margin: 10px;
 }
 .menu {
- padding-top: 95px;
- 
+  padding-top: 95px;
 }
 .menu a {
-display: block;
-text-decoration: none;
- margin-top: 5px;
- color:#b3b4bd;
- font-size: 1rem;
+  display: block;
+  text-decoration: none;
+  margin-top: 5px;
+  color: #b3b4bd;
+  font-size: 1rem;
 }
- i{
+i {
   display: inline;
-  color:#b3b4bd;
+  color: #b3b4bd;
   margin-left: 10px;
 }
 
-
-h1{
+h1 {
   font-size: 1rem;
   margin: 10px 10px;
   color: #29293c;
 }
 
-
-.item *{
-display: inline;
-position: relative;
+.item * {
+  display: inline;
+  position: relative;
 }
 
 .item {
-height: 35px;
-padding-top: 5px;
-transition: all 0.4s ease ;
-cursor: pointer;
+  height: 35px;
+  padding-top: 5px;
+  transition: all 0.4s ease;
+  cursor: pointer;
 }
 
-.item:hover{
+.item:hover {
   background-color: #29293c;
 }
-
-
 
 .items {
-height: 35px;
-padding-top: 5px;
-transition: all 0.4s ease ;
-cursor: pointer;
+  height: 35px;
+  padding-top: 5px;
+  transition: all 0.4s ease;
+  cursor: pointer;
 }
-.items:hover{
+.items:hover {
   background-color: #29293c;
 }
-.items *{
-display: inline;
-position: static;
-
+.items * {
+  display: inline;
+  position: static;
 }
 .menuName {
- color:#b3b4bd;
- font-size: 1.2rem;
- position: absolute;
- left: 40px;
- margin-top: -2px
+  color: #b3b4bd;
+  font-size: 1.2rem;
+  position: absolute;
+  left: 40px;
+  margin-top: -2px;
 }
-.fa-chevron-down{
+.fa-chevron-down {
   position: absolute;
   left: 220px;
   margin-top: 5px;
@@ -99,36 +98,12 @@ position: static;
   display: none;
   transition: 0.5s;
 }
-.subMenu a{
+.subMenu a {
   margin-left: 40px;
   white-space: nowrap;
   opacity: 0.6;
   transition: all 0.3s ease;
 }
-.subMenu a:hover{
+.subMenu a:hover {
   opacity: 1;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
