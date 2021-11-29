@@ -1,0 +1,162 @@
+      {menu.filter((items) => items[0].class === props.clss).map((item) => {
+
+          return item.length === 1 ? (
+
+// Başlık
+
+            <Link
+              to={`/${item[0].menu}`.toLowerCase().split(" ").join("_")}
+              key={Math.random()}
+            >
+              <div className="item">
+                <div className="icon">
+                  <i className={item[0].icon}></i>
+                </div>
+                <div className="menuName ">{item[0].menu}</div>
+              </div>
+            </Link>
+
+          ) : (
+
+// Açılan Başlık
+
+            <div key={Math.random()}>
+              <div
+                onClick={() => {
+                  if (
+                    document.getElementById(
+                      item[0].menu.toLowerCase().split(" ").join("_")
+                    ).style.display === "none"
+                  ) 
+                  
+                  {
+                    document.getElementById(
+                      item[0].menu.toLowerCase().split(" ").join("_")
+                    ).style.display = "block";
+                    document.getElementById(
+                      item[0].menu.toUpperCase().split(" ").join("_")
+                    ).style.transform = "rotate(90deg)";
+                  } 
+                  
+                  else {
+                    document.getElementById(
+                      item[0].menu.toLowerCase().split(" ").join("_")
+                    ).style.display = "none";
+                    document.getElementById(
+                      item[0].menu.toUpperCase().split(" ").join("_")
+                    ).style.transform = "rotate(0deg)";
+                  }
+
+                }}
+                className="items"
+              >
+
+                <div className="icon">
+                  <i className={item[0].icon}></i>
+                </div>
+                <div className="menuName">{item[0].menu}</div>
+                <i
+                  id={item[0].menu.toUpperCase().split(" ").join("_")}
+                  className={"fas fa-angle-right"}
+                ></i>
+
+
+              </div>
+
+              <div
+                id={item[0].menu.toLowerCase().split(" ").join("_")}
+                className="subMenu"
+                style={{ display: "none" }}
+              >
+                {item[1].map((sub) =>
+                  sub.length === 1 ? (
+
+// Açılan Başlık > Başlık
+
+                    <div key={Math.random()} >
+
+                      <Link
+                        to={`/${sub[0]}`.toLowerCase().split(" ").join("_")}
+                      >
+                        {sub[0]}
+                      </Link>
+
+                    </div>
+
+                  ) : (
+
+// Açılan Başlık > Açılan Başlık
+
+                    <div key={Math.random()}>
+                      <div
+                        className="subHead"
+                        onClick={() => {
+                          if (
+                            document.getElementById(
+                              sub[0].toUpperCase().split(" ").join("_")
+                            ).style.display === "none"
+                          ) 
+                          
+                          {
+                            document.getElementById(
+                              sub[0].toUpperCase().split(" ").join("_")
+                            ).style.display = "block";
+
+                            document.getElementById(
+                              sub[0].toLowerCase().split(" ").join("_")
+                            ).style.transform = "rotate(90deg)";
+                          } 
+                          
+                          else {
+                            document.getElementById(
+                              sub[0].toUpperCase().split(" ").join("_")
+                            ).style.display = "none";
+
+                            document.getElementById(
+                              sub[0].toLowerCase().split(" ").join("_")
+                            ).style.transform = "rotate(0deg)";
+                          }
+
+                        }}
+                      >
+
+                        <div className="subItems">{sub[0]}</div>
+                        <i
+                          id={sub[0].toLowerCase().split(" ").join("_")}
+                          className={"fas fa-angle-right"}
+                        ></i>
+                      </div>
+
+{/* Açılan Başlık > Açılan Başlık > Başlık  */}
+
+                      <div
+                        className="bottomSub"
+                        style={{ display: "none" }}
+                        id={sub[0].toUpperCase().split(" ").join("_")}
+                      >
+                        {sub[1].map((subhead) => (
+
+
+                          <Link
+                            key={Math.random()}
+                            to={`/${subhead}`
+                              .toLowerCase()
+                              .split(" ")
+                              .join("_")}
+                            className="subHeadDiv"
+                          >
+                            <i className="fas fa-caret-right"></i>
+                            {subhead}
+                          </Link>
+
+
+                        ))}
+
+                      </div>
+                    </div>
+                  )
+                )}
+              </div>
+            </div>
+          );
+        })}

@@ -1,0 +1,171 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300&display=swap");
+
+$background: #1b1b2a;
+$açıkgri: #b3b4bd;
+$koyugri: #29293c;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+
+  &::selection {
+    background: transparent;
+  }
+}
+
+.sideBar {
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 260px;
+  background-color: $background;
+
+  /* logo */
+
+  .logo {
+    position: fixed;
+    background-color: $background;
+    -moz-box-shadow: 0 5px 5px $açıkgri;
+    -webkit-box-shadow: 0 5px 5px $açıkgri;
+    box-shadow: 0 5px 5px $açıkgri;
+    z-index: 2;
+
+    img {
+      width: 240px;
+      margin: 10px;
+    }
+  }
+
+  i {
+    display: inline;
+    color: $açıkgri;
+    margin-left: 10px;
+  }
+  h1 {
+    font-size: 1rem;
+    margin: 10px 10px;
+    color: $koyugri;
+  }
+
+  .menu {
+    padding-top: 55px;
+
+    a {
+      display: block;
+      text-decoration: none;
+      color: $açıkgri;
+      font-size: 1rem;
+      padding: 2px 0;
+    }
+  }
+
+  /* Alt başlıksız Başlık */
+
+  .item {
+    height: 35px;
+    padding-top: 5px;
+    transition: all 0.4s ease;
+    cursor: pointer;
+
+    * {
+      display: inline;
+      position: relative;
+    }
+
+    &:hover {
+      background-color: $koyugri;
+    }
+  }
+
+  /* Alt başlıklı Başlık */
+
+  .items {
+    height: 35px;
+    padding-top: 5px;
+    transition: all 0.4s ease;
+    cursor: pointer;
+
+    * {
+      display: inline;
+      position: static;
+    }
+
+    &:hover {
+      background-color: $koyugri;
+    }
+  }
+
+  .menuName {
+    color: $açıkgri;
+    font-size: 1.2rem;
+    position: absolute;
+    left: 40px;
+    margin-top: -2px;
+  }
+
+  .fa-angle-right {
+    position: absolute;
+    left: 220px;
+    margin-top: 5px;
+    margin-right: 10px;
+    transition: 0.1s;
+  }
+
+  .subMenu {
+    background-color: $koyugri;
+    cursor: pointer;
+
+    a {
+      margin-left: 55px;
+      white-space: nowrap;
+      opacity: 0.6;
+      transition: all 0.3s ease;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+
+  .subHead {
+    background-color: $koyugri;
+    cursor: pointer;
+
+    & > div {
+      padding: 2px 0;
+      margin-left: 55px;
+      white-space: nowrap;
+      opacity: 0.6;
+      color: $açıkgri;
+      transition: all 0.3s ease;
+      
+    }
+
+    i {
+      margin-top: -20px;
+      margin-left: 25px;
+    }
+
+    .subItems:hover {
+      opacity: 1;
+    }
+  }
+
+  .bottomSub {
+
+    a {
+      margin-top: 2px;
+    }
+
+    .subHeadDiv {
+      cursor: pointer;
+
+      & i {
+        padding-right: 10px;
+        padding-left: -10px;
+      }
+    }
+  }
+}

@@ -1,0 +1,171 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+*::-moz-selection {
+  background: transparent;
+}
+
+*::selection {
+  background: transparent;
+}
+
+.sideBar {
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 260px;
+  background-color: #1b1b2a;
+  /* logo */
+  /* Alt başlıksız Başlık */
+  /* Alt başlıklı Başlık */
+}
+
+.sideBar .logo {
+  position: fixed;
+  background-color: #1b1b2a;
+  -webkit-box-shadow: 0 5px 5px #b3b4bd;
+  box-shadow: 0 5px 5px #b3b4bd;
+  z-index: 2;
+}
+
+.sideBar .logo img {
+  width: 240px;
+  margin: 10px;
+}
+
+.sideBar i {
+  display: inline;
+  color: #b3b4bd;
+  margin-left: 10px;
+}
+
+.sideBar h1 {
+  font-size: 1rem;
+  margin: 10px 10px;
+  color: #29293c;
+}
+
+.sideBar .menu {
+  padding-top: 55px;
+}
+
+.sideBar .menu a {
+  display: block;
+  text-decoration: none;
+  color: #b3b4bd;
+  font-size: 1rem;
+  padding: 2px 0;
+}
+
+.sideBar .item {
+  height: 35px;
+  padding-top: 5px;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  cursor: pointer;
+}
+
+.sideBar .item * {
+  display: inline;
+  position: relative;
+}
+
+.sideBar .item:hover {
+  background-color: #29293c;
+}
+
+.sideBar .items {
+  height: 35px;
+  padding-top: 5px;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  cursor: pointer;
+}
+
+.sideBar .items * {
+  display: inline;
+  position: static;
+}
+
+.sideBar .items:hover {
+  background-color: #29293c;
+}
+
+.sideBar .menuName {
+  color: #b3b4bd;
+  font-size: 1.2rem;
+  position: absolute;
+  left: 40px;
+  margin-top: -2px;
+}
+
+.sideBar .fa-angle-right {
+  position: absolute;
+  left: 220px;
+  margin-top: 5px;
+  margin-right: 10px;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+}
+
+.sideBar .subMenu {
+  background-color: #29293c;
+  cursor: pointer;
+}
+
+.sideBar .subMenu a {
+  margin-left: 55px;
+  white-space: nowrap;
+  opacity: 0.6;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.sideBar .subMenu a:hover {
+  opacity: 1;
+}
+
+.sideBar .subHead {
+  background-color: #29293c;
+  cursor: pointer;
+}
+
+.sideBar .subHead > div {
+  padding: 2px 0;
+  margin-left: 55px;
+  white-space: nowrap;
+  opacity: 0.6;
+  color: #b3b4bd;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.sideBar .subHead i {
+  margin-top: -20px;
+  margin-left: 25px;
+}
+
+.sideBar .subHead .subItems:hover {
+  opacity: 1;
+}
+
+.sideBar .bottomSub a {
+  margin-top: 2px;
+}
+
+.sideBar .bottomSub .subHeadDiv {
+  cursor: pointer;
+}
+
+.sideBar .bottomSub .subHeadDiv i {
+  padding-right: 10px;
+  padding-left: -10px;
+}
+/*# sourceMappingURL=style.css.map */

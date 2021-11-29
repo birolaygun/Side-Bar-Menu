@@ -1,47 +1,27 @@
-// Menuye Başlık ekleme çıkarma nasıl yapılır ?
+// Menuye Başlık ekleme-çıkarma işlemi nasıl yapılır ?
 
-// aşağıdaki menu array'inin içindekileri incelerseniz zor olmadığını görürsünüz.
+// Aşağıda "menu" arrayi mevcut.
+// Bütün başlıklar, alt başlıklar buralardan değiştirilir, eklenir ve çıkarılır.
+//  menü arrayi içindeki bir arrayi aşağıda anlatıyorum:
 
-// 1.) Side Bar Menüye Alt başlık içermeyen bir Başlık eklemek için :
-
-// [
+//  [
 //     {
-//       menu: "Dashboard",
-//       icon: `fas fa-columns`,
-//       class: "main",
-//       id: 1,
+//       menu: "Applications",           --> üst menünün başlığı
+//       icon: "fas fa-mobile-alt",       --> üst menünün iconu. fontawesome.com üzerinden seçtiğiniz bir iconun sadece classname'ini buraya yapıştırın
+//       class: "custom",                --> menüde CUSTOM LAYOUT... gibi grup başlıklarını görmüşsünüzdür. başlığınızın hangi grupta yer almasını istiyorsanız onu buraya yazın. yeni bir grup oluşturabilir veya grup silebilirsiniz. Ayrıca ilk grup başlığı ekranda görünmeyecek
+//       id: 2,                          --> benzersiz bir id verin. hepsi birbirinden farklı olmalı
 //     },
+//     [                                 --> eğer başlığınız alt başlıklara sahipse bu array'i de ekleyin.
+//       ["Application 3"],               --> Alt başlıkları bu şekilde ekleyin
+//       ["Application 1", ["Application 22"]],      --> Alt başlıkların altına da alt başlık ekleyecekseniz bu şekilde ekleyin.
+
+//     ],
 //   ],
 
-//   bu array'i aşağıdaki manu array'i içine kopyalayın.
-
-//   menu: Side bar menüde görünen başlık ismidir
-//   icon: https://fontawesome.com/ içinden belirlediğiniz bir iconun sadece class ismini buraya yapıştırın
-//   class: hangi başlık sınıfında yer alacağını buraya yazın. yeni başlık sınıfı eklemek isterseniz app.js üzerinden copy-past yaparak
-//   başarabilirsiniz. burayı detaylı yazmaya gerek duymuyorum.
-//   id: her başlığın farklı bir id ye sahip olmasına dikkat edin
-
-// 2.) Side Bar Menüye Alt başlıkları olan Başlık eklemek için :
-
-//     {
-//       menu: "Applications",
-//       icon: "fas fa-mobile-alt",
-//       class: "custom",
-//       id: 2,
-//     },
-//     ["Application 1", "Application 2", "Application 3"],
-//   ],
-
-//   bu array'i aşağıdaki manu array'i içine kopyalayın.
-
-//   yukarıda anlattığım kısımları geçiyorum. Bunların altında bulunan ["Application 1", "Application 2", "Application 3"]
-//   alt başlıkları ifade ediyor. İstediğiniz başlıkları  menu array'inin içine alıp istemediğinizi silebilirsiniz.
-
+// Linkler sorunsuz çalışıyor.
 //   İyi çalışmalar...
 
-
 export const menu = [
-
   [
     {
       menu: "Dashboard",
@@ -57,7 +37,11 @@ export const menu = [
       class: "custom",
       id: 2,
     },
-    ["Application 1", "Application 2", "Application 3"],
+    [
+      ["Application 1", ["Application 11", "Application 22"]],
+      ["Application 2", ["Application 33", "Application 44"]],
+      ["Application 3"],
+    ],
   ],
   [
     {
@@ -66,7 +50,7 @@ export const menu = [
       class: "custom",
       id: 3,
     },
-    ["Page 1", "Page 2"],
+    [["Pages 1", ["Pages 11", "Pages 22"]], ["Pages 2"], ["Pages 3"]],
   ],
   [
     {
@@ -75,7 +59,11 @@ export const menu = [
       class: "layout",
       id: 4,
     },
-    ["Form 1", "Form 2", "Form 3"],
+    [
+      ["Forms 1", ["Forms 11", "Forms 22"]],
+      ["Forms 2", ["Forms 33", "Forms 44"]],
+      ["Forms 3", ["Forms 55", "Forms 66"]],
+    ],
   ],
   [
     {
@@ -84,7 +72,7 @@ export const menu = [
       class: "layout",
       id: 5,
     },
-    ["Subheader 1", "Subheader 2", "Subheader 3"],
+    [["Subheaders 1"], ["Subheaders 2"], ["Subheaders 3"]],
   ],
   [
     {
@@ -93,7 +81,11 @@ export const menu = [
       class: "layout",
       id: 6,
     },
-    ["General 1", "General 2"],
+    [
+      ["General 1", ["General 11", "General 22"]],
+      ["General 2", ["General 33", "General 44"]],
+      ["General 3"],
+    ],
   ],
   [
     {
@@ -110,7 +102,11 @@ export const menu = [
       class: "crud",
       id: 8,
     },
-    ["KTDatatable 1", "KTDatatable 2"],
+    [
+      ["KTDatatable 1", ["KTDatatable 11", "KTDatatable 22"]],
+      ["KTDatatable 2"],
+      ["KTDatatable 3"],
+    ],
   ],
   [
     {
@@ -119,7 +115,11 @@ export const menu = [
       class: "crud",
       id: 9,
     },
-    ["Datatables.net 1", "Datatables.net 2"],
+    [
+      ["Datatables.net 1", ["Datatables.net 11", "Datatables.net 22"]],
+      ["Datatables.net 2", ["Datatables.net 33", "Datatables.net 44"]],
+      ["Datatables.net 3", ["Datatables.net 55", "Datatables.net 66"]],
+    ],
   ],
   [
     {
@@ -128,7 +128,7 @@ export const menu = [
       class: "crud",
       id: 10,
     },
-    ["File Upload 1", "File Upload 2"],
+    [["File Upload 1"], ["File Upload 2"], ["File Upload 3"]],
   ],
   [
     {
@@ -137,7 +137,11 @@ export const menu = [
       class: "features",
       id: 11,
     },
-    ["Bootstrap 1", "Bootstrap 2", "Bootstrap 3"],
+    [
+      ["Bootstrap 1", ["Bootstrap 11", "Bootstrap 22"]],
+      ["Bootstrap 2"],
+      ["Bootstrap 3"],
+    ],
   ],
   [
     {
@@ -146,7 +150,11 @@ export const menu = [
       class: "features",
       id: 12,
     },
-    ["Custom 1", "Custom 2", "Custom 3"],
+    [
+      ["Custom 1", ["Custom 11", "Custom 22"]],
+      ["Custom 2", ["Custom 33", "Custom 44"]],
+      ["Custom 3"],
+    ],
   ],
   [
     {
@@ -155,6 +163,14 @@ export const menu = [
       class: "features",
       id: 13,
     },
-    ["Cards 1", "Cards 2", "Cards 3"],
+    [
+      ["Cards 1", ["Cards 11", "Cards 22"]],
+      ["Cards 2", ["Cards 33", "Cards 44"]],
+      ["Cards 3", ["Cards 55", "Cards 66"]],
+    ],
+
   ],
 ];
+
+
+
