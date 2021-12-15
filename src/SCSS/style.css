@@ -1,5 +1,9 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300&display=swap");
+.App {
+  height: 100vh;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -22,9 +26,19 @@
   bottom: 0;
   width: 260px;
   background-color: #1b1b2a;
+  overflow-y: scroll;
+  height: 100vh;
+  -ms-overflow-style: none;
+  /* for Internet Explorer, Edge */
+  scrollbar-width: none;
+  /* for Firefox */
   /* logo */
   /* Alt başlıksız Başlık */
   /* Alt başlıklı Başlık */
+}
+
+.sideBar::-webkit-scrollbar {
+  display: none;
 }
 
 .sideBar .logo {
@@ -54,6 +68,10 @@
 
 .sideBar .menu {
   padding-top: 55px;
+  position: relative;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
 }
 
 .sideBar .menu a {
@@ -167,5 +185,15 @@
 .sideBar .bottomSub .subHeadDiv i {
   padding-right: 10px;
   padding-left: -10px;
+}
+
+.main {
+  position: absolute;
+  top: 0;
+  left: 260px;
+  right: 0;
+  background-color: black;
+  overflow: auto;
+  height: 100vh;
 }
 /*# sourceMappingURL=style.css.map */

@@ -49,7 +49,14 @@ const Menu = (props) => {
                     ) : (
                       // Açılan Başlık
 
-                      <div id={item[0].id.toString().toUpperCase().split(" ").join("_")}  key={Math.random()}>
+                      <div
+                        id={item[0].id
+                          .toString()
+                          .toUpperCase()
+                          .split(" ")
+                          .join("_")}
+                        key={Math.random()}
+                      >
                         <div
                           onClick={() => {
                             if (
@@ -64,10 +71,12 @@ const Menu = (props) => {
                                 item[0].menu.toUpperCase().split(" ").join("_")
                               ).style.transform = "rotate(90deg)";
                               document.getElementById(
-                                item[0].id.toString().toUpperCase().split(" ").join("_")
+                                item[0].id
+                                  .toString()
+                                  .toUpperCase()
+                                  .split(" ")
+                                  .join("_")
                               ).style.backgroundColor = "#29293c";
-
-                              
                             } else {
                               document.getElementById(
                                 item[0].menu.toLowerCase().split(" ").join("_")
@@ -75,14 +84,13 @@ const Menu = (props) => {
                               document.getElementById(
                                 item[0].menu.toUpperCase().split(" ").join("_")
                               ).style.transform = "rotate(0deg)";
-                                document.getElementById(
-                                  item[0].id
-                                    .toString()
-                                    .toUpperCase()
-                                    .split(" ")
-                                    .join("_")
-                                ).style.backgroundColor = "transparent";
-
+                              document.getElementById(
+                                item[0].id
+                                  .toString()
+                                  .toUpperCase()
+                                  .split(" ")
+                                  .join("_")
+                              ).style.backgroundColor = "transparent";
                             }
                           }}
                           className="items"
